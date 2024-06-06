@@ -1,0 +1,61 @@
+/* styles.css */
+
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: lavenderblush; /* светло-лиловый фон */
+    text-align: center; /* выравнивание по центру */
+}
+/* Форма авторизации */
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"],
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+/* Ссылки на статьи */
+.article-link {
+    display: block;
+    text-decoration: none;
+    color: blue; /* цвет ссылки */
+    margin: 10px;
+}
+/* Профиль пользователя */
+.profile {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.profile input[type="text"],
+.profile input[type="password"],
+.profile input[type="email"],
+.profile input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+/* Стили для тегов */
+.tags {
+    margin-top: 20px;
+}
+.tags span {
+    display: inline-block;
+    background-color: lightblue; /* цвет фона тега */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+/* Скрытая форма добавления статьи */
+#формаДобавленияСтатьи {
+    display: none;
+}
+/* Форма регистрации */
+#формаРегистрации {
+    display: none;
+}

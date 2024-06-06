@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мой сайт</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Приветствие пользователя -->
+    <h2 id="приветствиеПользователя" style="display: none;"></h2>
+
+    <!-- Форма авторизации -->
+    <div id="страницаАвторизации">
+        <h2>Авторизация</h2>
+        <form class="login-form" onsubmit="войти(); return false;">
+            <input type="email" id="почта" placeholder="Электронная почта" required>
+            <input type="password" id="пароль" placeholder="Пароль" required>
+            <input type="submit" value="Войти">
+        </form>
+        <button onclick="показатьФормуРегистрации()">Регистрация</button>
+    </div>
+
+    <!-- Форма регистрации -->
+    <div id="формаРегистрации">
+        <h2>Регистрация</h2>
+        <form class="login-form" onsubmit="зарегистрировать(); return false;">
+            <input type="text" id="новоеИмя" placeholder="Имя" required>
+            <input type="email" id="новаяПочта" placeholder="Электронная почта" required>
+            <input type="password" id="новыйПароль" placeholder="Пароль" required>
+            <input type="submit" value="Зарегистрироваться">
+        </form>
+    </div>
+
+    <!-- Главная страница со списком статей -->
+    <div id="главнаяСтраница" style="display: none;">
+        <!-- Поле поиска -->
+        <input type="text" id="поиск" placeholder="Поиск">
+        <!-- Кнопка "Добавить статью" для администратора -->
+        <button id="добавитьСтатью" style="display: none;" onclick="показатьФормуДобавленияСтатьи()">Добавить статью</button>
+        <!-- Кнопка "Профиль" для администратора -->
+        <button id="перейтиКПрофилю" style="display: none;" onclick="перейтиКПрофилю()">Профиль</button>
+        <!-- Кнопка "Выход" для администратора -->
+        <button id="выйти" style="display: none;" onclick="выйти()">Выход</button>
+        <!-- Список статей -->
+        <h2>Статьи</h2>
+        <div id="списокСтатей"></div>
+    </div>
+
+    <!-- Страница добавления статьи (доступна только администратору) -->
+    <div id="страницаДобавленияСтатьи" style="display: none;">
+        <h2>Добавить статью</h2>
+        <form onsubmit="добавитьСтатью(); return false;">
+            <input type="text" id="названиеСтатьи" placeholder="Название статьи" required><br>
+            <textarea id="содержаниеСтатьи" placeholder="Содержание статьи" required></textarea><br>
+            <input type="text" id="тегиСтатьи" placeholder="Теги статьи (через запятую)"><br>
+            <input type="file" id="файлДляСкачивания" accept=".txt,.pdf"><br>
+            <input type="submit" value="Добавить">
+        </form>
+        <!-- Кнопка для возвращения на главную страницу -->
+        <button onclick="вернутьсяНаГлавнуюСтраницу()">Назад</button>
+    </div>
+
+    <!-- Страница профиля пользователя (доступна только администратору) -->
+    <div id="страницаПрофиля" style="display: none;">
+        <h2>Профиль администратора</h2>
+        <form onsubmit="сохранитьИзменения(); return false;">
+            <input type="text" id="новоеИмяПрофиль" placeholder="Новое имя"><br>
+            <input type="email" id="новаяПочтаПрофиль" placeholder="Новая почта"><br>
+            <input type="password" id="новыйПарольПрофиль" placeholder="Новый пароль"><br>
+            <input type="submit" value="Сохранить">
+        </form>
+        <!-- Список пользователей (доступен только администратору) -->
+        <div id="списокПользователей" class="profile"></div>
+        <!-- Кнопка для возвращения на главную страницу -->
+        <button onclick="вернутьсяНаГлавнуюСтраницу()">Назад</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
