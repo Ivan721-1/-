@@ -9,7 +9,7 @@ const config = {
   user: 'ваш_пользователь',
   password: 'ваш_пароль',
   server: 'localhost',
-  database: 'ваша_база_данных',
+  database: 'SQLQuery1',
 };
 
 // Подключение к базе данных
