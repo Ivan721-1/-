@@ -6,8 +6,6 @@ const port = 3000;
 
 // Конфигурация подключения к базе данных SQL Server
 const config = {
-  user: 'ваш_пользователь',
-  password: 'ваш_пароль',
   server: 'localhost',
   database: 'master',
 };
