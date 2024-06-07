@@ -27,9 +27,8 @@ class Статья {
     }
 }
 
-// Функция для входа
 function войти() {
-    const почта = document.getElementById("почта").value;
+    const почта = document.getElementById("почта").value.toLowerCase(); // Приводим к нижнему регистру
     const пароль = document.getElementById("пароль").value;
 
     // Проверяем наличие пользователя с такой почтой и паролем
@@ -42,6 +41,7 @@ function войти() {
         alert("Неверная почта или пароль.");
     }
 }
+
 
 // Функция для регистрации нового пользователя
 function зарегистрировать() {
